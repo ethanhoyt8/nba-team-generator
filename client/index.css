@@ -1,0 +1,64 @@
+h1 {
+    color: darkorange;
+    text-align: center;
+    font-family:fantasy;
+    font-size:xx-large;
+}
+
+body {
+    background-image: url('https://wallpaper.dog/large/10763018.jpg');
+    background-position:initial;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    border:none;
+    padding: 10px;
+    text-align: center;
+}
+
+#getPlayers {
+    background-color: crimson;
+    position: relative;
+    top: 350px;
+    left: 43%;
+    font-family:fantasy;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+
+#createTeam {
+    background-color: blue;
+    position: relative;
+    top: 400px;
+    left: 45%;
+    font-family:fantasy;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    
+}
+
+#deleteTeam {
+    position: relative;
+    left: 45%;
+    top: 425px;
+    font-family: fantasy;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+}
+
+#getTeams {
+    position: relative;
+    left: 45%;
+    top: 375px;
+    font-family: fantasy;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    background-color:violet;
+}
