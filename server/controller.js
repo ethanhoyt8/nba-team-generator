@@ -1,6 +1,6 @@
 let players = require("./players.json")
 let teams = require("./teams.json")
-let globalID = 1
+let globalID = 2
 
 
 module.exports = {

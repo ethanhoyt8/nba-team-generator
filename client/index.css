@@ -73,6 +73,10 @@ main {
     height: 70%;
     width: 70%;
     padding: 5% 15%;
+    overflow: auto;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     /* background-color: #52489C; */
     /* color: #52489C; */
 }
@@ -94,6 +98,13 @@ main {
     /* background-color: #EA7317; */
     color:white;
 }
+.player {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .player-name {
     font-family: fantasy;
     font-size:x-large;
@@ -127,6 +138,8 @@ main {
     height: 80%;
     width: 25%;
     /* background-color: #52489C; */
+    color: #FDFCDC;
+    font-size: x-large;
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -157,6 +170,13 @@ main {
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
 }
+.team {
+    width: 30%;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .team-name {
     font-size: 40px;
@@ -165,11 +185,12 @@ main {
     background-color:#EA7317;
 }
 .team-players {
-    height: 90%;
-    width: 65%;
+    /* height: 90%; */
+    /* width: 65%; */
     font-size: x-large;
     font-family: fantasy;
     color:#FDFCDC;
+    background-color:#52489C;
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
@@ -181,7 +202,7 @@ main {
     display: flex;
     align-items: center;
     background-color:#FDFCDC;
-    color: white;
+    color:black;
 }
 
 #createteam {
@@ -191,9 +212,9 @@ main {
     color: #FDFCDC;
     
 }
-#createTeam:hover {background-color: #8D8D92}
+#createteam:hover {background-color: #8D8D92}
 
-#createTeam:active {
+#createteam:active {
   background-color: #8D8D92;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -203,6 +224,27 @@ main {
     font-size: medium;
     background-color:#52489C;
     color: #FDFCDC;
+}
+#clearteam:hover {background-color: #8D8D92}
+
+#clearteam:active {
+  background-color: #8D8D92;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.addtoteam {
+    background-color:#FDFCDC;
+    color:#EA7317;
+    font-family: fantasy;
+    font-size: small;
+}
+.addtoteam:hover {background-color: #8D8D92}
+
+.addtoteam:active {
+  background-color: #8D8D92;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 

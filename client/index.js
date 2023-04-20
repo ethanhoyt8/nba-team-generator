@@ -1,4 +1,4 @@
-// const baseURL = 'http://localhost:7654'
+const baseURL = 'http://localhost:7654'
 // console.log('It works')
 
 let getPlayerBtn = document.querySelector("#getPlayers")
@@ -7,17 +7,53 @@ let playersDisplay = document.querySelector('#playersDisplay')
 let teamsDisplay = document.querySelector('.teamsDisplay')
 let getTeamsBtn = document.querySelector('#getTeams')
 let selectedPlayerNames = document.querySelector('#newteamplayers')
+let newTeamName = document.querySelector('#newteamname')
+let createTeam = document.querySelector('#createteam')
+let clearTeam = document.querySelector('#clearteam')
 
+
+let allPlayers = []
 let selectedPlayers = []
 
-const addPlayers = () => {
-    selectedPlayers.push(player)
-    let playerName = document.createElement('p')
-    playerName.textContent = player.name
-    selectedPlayerNames.appendChild(playerName)
-    
+const addPlayers = (id) => {
+    let player = allPlayers[id]
+    if(selectedPlayers.length >= 2){
+        alert("Can't add more than 2 players")
+    }else if(selectedPlayers[0] === player || selectedPlayers[1] === player){
+        alert('Player has already been added')
+    }else{
+        selectedPlayers.push(player)
+        let playerName = document.createElement('p')
+        playerName.textContent = player.name
+        selectedPlayerNames.appendChild(playerName)
+    }
+}
+  
+const removeNewTeam = () => {
+    selectedPlayers = []
+    selectedPlayerNames.innerHTML = ''
+    newTeamName.value = ''
 }
 
+const createNewTeam = () => {
+    if(selectedPlayers.length === 2 && newTeamName.value){
+        let newTeam = {
+            name: newTeamName.value,
+            players: selectedPlayers
+        }
+        axios.post(baseURL + '/teams', newTeam)
+        .then(() => {
+            removeNewTeam()
+            alert('New team created')
+        })
+    }else{
+        alert('Make sure team has two players and a team name')
+    }
+
+}
+
+
+    
 const buildPlayerCards = (players) => {
     if(!teamsDisplay.classList.contains('invisible')){
         teamsDisplay.classList.add('invisible')
@@ -34,7 +70,7 @@ const buildPlayerCards = (players) => {
         <p class="player-name">${player.name}</p>
         <p class="player-stats">Offense: ${player.stats.offense}</p>
         <p class="player-stats">Defense: ${player.stats.defense}</p>
-        <button onclick="addPlayers()">Add to team</button>`
+        <button class="addtoteam" onclick="addPlayers(${player.id})">Add to team</button>`
 
         playersDisplay.appendChild(playerDiv)
     })
@@ -51,7 +87,6 @@ const buildTeamCards = (teams) => {
     teamsDisplay.innerHTML = ""
 
     teams.forEach(team => {
-        console.log(team)
         
         let teamDiv = document.createElement('div')
         teamDiv.classList.add('team')
@@ -68,14 +103,15 @@ const buildTeamCards = (teams) => {
         }
         teamsDisplay.appendChild(teamDiv)
     })
-
-
-
 }
+
+
+
 
 const getPlayer = () => {
     axios.get('http://localhost:7654/players')
       .then(res => {
+        allPlayers = res.data
         buildPlayerCards(res.data)
       })
   }
@@ -90,6 +126,8 @@ const getTeams = () => {
 
 getPlayerBtn.addEventListener('click', getPlayer)
 getTeamsBtn.addEventListener('click', getTeams)
+clearTeam.addEventListener('click', removeNewTeam)
+createTeam.addEventListener('click', createNewTeam)
 
 
 
