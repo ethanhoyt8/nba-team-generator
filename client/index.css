@@ -1,8 +1,9 @@
 h1 {
-    color: darkorange;
+    color: #EA7317;
     text-align: center;
     font-family:fantasy;
-    font-size:xx-large;
+    font-size:xxx-large;
+    top: 5%;
 }
 
 body {
@@ -10,6 +11,10 @@ body {
     background-position:initial;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 button {
@@ -19,46 +24,185 @@ button {
 }
 
 #getPlayers {
-    background-color: crimson;
-    position: relative;
-    top: 350px;
-    left: 43%;
+    background-color: #52489C;
+    color: #FDFCDC;
     font-family:fantasy;
     font-size: x-large;
     display: flex;
     align-items: center;
+   
 }
+#getPlayers:hover {background-color: #8D8D92}
 
-#createTeam {
-    background-color: blue;
-    position: relative;
-    top: 400px;
-    left: 45%;
-    font-family:fantasy;
-    font-size: x-large;
-    display: flex;
-    align-items: center;
-    
-}
-
-#deleteTeam {
-    position: relative;
-    left: 45%;
-    top: 425px;
-    font-family: fantasy;
-    font-size: x-large;
-    display: flex;
-    align-items: center;
-    background-color: yellow;
+#getPlayers:active {
+  background-color: #8D8D92;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 #getTeams {
-    position: relative;
-    left: 45%;
-    top: 375px;
     font-family: fantasy;
     font-size: x-large;
     display: flex;
     align-items: center;
-    background-color:violet;
+    background-color: #EA7317;
+    color: #FDFCDC;
 }
+
+#getTeams:hover {background-color: #8D8D92}
+
+#getTeams:active {
+  background-color: #8D8D92;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+}
+
+main {
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.teamsDisplay {
+    height: 70%;
+    width: 70%;
+    padding: 5% 15%;
+    /* background-color: #52489C; */
+    /* color: #52489C; */
+}
+
+.playersView {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#playersDisplay {
+    height: 90%;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    /* background-color: #EA7317; */
+    color:white;
+}
+.player-name {
+    font-family: fantasy;
+    font-size:x-large;
+    background-color: #EA7317;
+}
+
+.player-image {
+    height: 15vh;
+    width: 45vw;
+    display: flex;
+    justify-content:center;
+    background-color:#FDFCDC;
+    width: 100px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 14px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    
+}
+
+.player-stats {
+    font-family: fantasy;
+    font-size: x-large;
+    background-color: #52489C;
+}
+
+#newTeam {
+    height: 80%;
+    width: 25%;
+    /* background-color: #52489C; */
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#viewButtons {
+    height: 10vh;
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.invisible {
+    display: none;
+}
+
+.playerIMG {
+    height: 100px;
+    background-color: #FDFCDC; 
+    width: 100px;
+    margin: 20px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    border-radius: 14px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+}
+
+.team-name {
+    font-size: 40px;
+    font-family: fantasy;
+    color:#FDFCDC;
+    background-color:#EA7317;
+}
+.team-players {
+    height: 90%;
+    width: 65%;
+    font-size: x-large;
+    font-family: fantasy;
+    color:#FDFCDC;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+#newteamname {
+    font-size: x-large;
+    font-family: fantasy;
+    display: flex;
+    align-items: center;
+    background-color:#FDFCDC;
+    color: white;
+}
+
+#createteam {
+    font-family: fantasy;
+    font-size:medium;
+    background-color:#EA7317;
+    color: #FDFCDC;
+    
+}
+#createTeam:hover {background-color: #8D8D92}
+
+#createTeam:active {
+  background-color: #8D8D92;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#clearteam {
+    font-family: fantasy;
+    font-size: medium;
+    background-color:#52489C;
+    color: #FDFCDC;
+}
+
+

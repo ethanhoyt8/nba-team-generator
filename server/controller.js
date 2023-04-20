@@ -8,6 +8,7 @@ module.exports = {
         res.status(200).send(players)
     },
     getTeam: (req,res) => {
+        console.log(teams)
         res.status(200).send(teams)
     },
 
@@ -23,12 +24,5 @@ module.exports = {
         globalID++
         res.status(200).send(teams)
     },
-
-    deleteTeam: (req,res) => {
-        const {id} = req.params
-        let index = teams.findIndex((elem) => elem.id === +id)
-        teams.splice(index, 1)
-        res.status(200).send(teams)
-    }
-
+    
 }

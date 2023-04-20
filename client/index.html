@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./reset.css">
    <link rel="stylesheet" href="./index.css">
     <title>NBA 2v2 Team Builder</title>
 </head>
 <body>
     <header>
-    <h1 id="title">NBA 2v2 Team Builder</h1>
-    <p>Create your duo from the list of players </p>
-
+        <h1 id="title">NBA 2v2 Team Builder</h1>
     </header>
+    <main>
+        <div class="teamsDisplay invisible"></div>
+        <div class="playersView invisible">
+            <div id="playersDisplay">
+                <div class="player"></div>
+            </div>
+            <div id="newTeam">
+                <input id="newteamname" placeholder="New Team Name">
+                <div id="newteamplayers"></div>
+                <button id="createteam">Create Team</button>
+                <button id="clearteam">Clear Team</button>
+            </div>
+        </div>
+    </main>
 
-    
-     <button id="getPlayers">View all players</button>
-
-     <button id="getTeams">View teams</button>
+    <section id="viewButtons">
+        <button id="getPlayers">View all players</button>
+        <button id="getTeams">View teams</button>
+    </section>
      
-     <button id="createTeam">Build team</button>
-
-    <button id="deleteTeam">Delete team</button>
-  
-    
-
-    <script src=""></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

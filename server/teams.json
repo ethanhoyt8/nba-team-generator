@@ -6,40 +6,56 @@
             {
                 "id": 0,
                 "name": "LeBron James",
-                "imgAddress": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
-                "stats": [
+                "imgURL": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+                "stats": {
                     
-                    {
-                        "id": 0,
-                        "offense": 9
-                    },
-                    {
-                        "id": 1,
-                        "defense": 8
-                    }
+                    "offense": 9,
+                    "defense": 8
                     
         
-                ]
+                }   
         
             },
             {
                 "id": 1,
                 "name": "Stephen Curry",
-                "imgAddress": "https://s3media.247sports.com/Uploads/Assets/360/529/9529360.jpg",
-                "stats": [
+                "imgURL": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png",
+                "stats": {
                     
-                    {
-                        "id": 0,
-                        "offense": 10
-                    },
-                    {
-                        "id": 1,
-                        "defense": 5
-                    }
+                    "offense": 10,
+                    "defense": 5
+                   
                     
-                ]
+                }
+        
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Hustlers",
+        "players": [
+            {
+                "id": 3,
+                "name": "Devin Booker",
+                "imgURL": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626164.png",
+                "stats": {
+                    "offense": 9,
+                    "defense": 7
+                   
+                }
+            },
+            {
+                "id": 8,
+                "name": "Kyrie Irving",
+                "imgURL": "https://cdn.nba.com/headshots/nba/latest/1040x760/202681.png",
+                "stats": {
+                    "offense": 9,
+                    "defense": 6
+                }
         
             }
         ]
     }
 ]
+                    
