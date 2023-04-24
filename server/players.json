@@ -120,5 +120,32 @@
             "offense": 9,
             "defense": 10
         }
+    },
+    {
+        "id": 12,
+        "name": "Damian Lillard",
+        "imgURL": "https://cdn.nba.com/headshots/nba/latest/1040x760/203081.png",
+        "stats": {
+            "offense": 10,
+            "defense": 5
+        }
+    },
+    {
+        "id": 13,
+        "name": "Jayson Tatum",
+        "imgURL": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png",
+        "stats": {
+            "offense": 9,
+            "defense": 7
+        }
+    },
+    {
+        "id": 14,
+        "name": "De'Aaron Fox",
+        "imgURL": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628368.png",
+        "stats": {
+            "offense": 9,
+            "defense": 8
+        }
     }
 ]
